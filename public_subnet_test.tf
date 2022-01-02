@@ -1,5 +1,5 @@
 resource "aws_security_group" "public_sg" {
-  name = "Naren-VPC-Public-Security-Group"
+  name = "VPC-Public-Security-Group"
   ingress {
     from_port   = 22
     protocol    = "tcp"
@@ -14,7 +14,7 @@ resource "aws_security_group" "public_sg" {
   }
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "Naren-VPC-Public-Security-Group"
+    Name = "VPC-Public-Security-Group"
   }
 }
 
@@ -25,6 +25,6 @@ resource "aws_instance" "public_instance" {
   subnet_id              = aws_subnet.public_subnet.id
   key_name               = aws_key_pair.key_pair.key_name
   tags = {
-    name = "Naren-VPC-Public-Instance"
+    name = "VPC-Public-Instance"
   }
 }

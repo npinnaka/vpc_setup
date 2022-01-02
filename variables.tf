@@ -1,7 +1,7 @@
 locals {
   tags = {
     environment = "dev"
-    app_name    = "Naren-VPC"
+    app_name    = "VPC"
   }
 }
 

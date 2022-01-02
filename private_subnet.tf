@@ -2,14 +2,14 @@ resource "aws_subnet" "private_subnet" {
   cidr_block = var.private_subnet_cidr
   vpc_id     = aws_vpc.vpc.id
   tags = {
-    Name = "Naren-VPC-Public-Subnet"
+    Name = "VPC-Public-Subnet"
   }
 }
 
 resource "aws_eip" "eip" {
   vpc = true
   tags = {
-    Name = "Naren-VPC-EIP"
+    Name = "VPC-EIP"
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_nat_gateway" "nat_gateway" {
   subnet_id     = aws_subnet.public_subnet.id
 
   tags = {
-    Name = "Naren-VPC-Nat-Gateway"
+    Name = "VPC-Nat-Gateway"
   }
 
   # To ensure proper ordering, it is recommended to add an explicit dependency
@@ -29,7 +29,7 @@ resource "aws_nat_gateway" "nat_gateway" {
 resource "aws_route_table" "private_route_table" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "Naren-VPC-Private-Subnet"
+    Name = "VPC-Private-Subnet"
   }
   route {
     cidr_block     = var.all_traffic

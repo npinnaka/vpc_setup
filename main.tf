@@ -6,7 +6,7 @@ resource "aws_key_pair" "key_pair" {
   public_key = tls_private_key.private_key.public_key_openssh
   key_name   = "narenkp"
   tags = {
-    Name = "Naren-VPC-KeyPair"
+    Name = "VPC-KeyPair"
   }
 }
 
@@ -18,7 +18,7 @@ resource "local_file" "key" {
 resource "aws_vpc" "vpc" {
   cidr_block = var.vpc_cidr
   tags = {
-    Name = "Naren-VPC"
+    Name = "VPC"
   }
 }
 

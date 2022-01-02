@@ -1,7 +1,7 @@
 resource "aws_internet_gateway" "internet_gateway" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "Naren-VPC-IGW"
+    Name = "VPC-IGW"
   }
 }
 
@@ -11,7 +11,7 @@ resource "aws_subnet" "public_subnet" {
   map_public_ip_on_launch = true
   availability_zone       = "${var.region}${var.az}"
   tags = {
-    Name = "Naren-VPC-Public-Subnet"
+    Name = "VPC-Public-Subnet"
   }
 }
 
@@ -22,7 +22,7 @@ resource "aws_route_table" "public_route_table" {
     gateway_id = aws_internet_gateway.internet_gateway.id
   }
   tags = {
-    Name = "Naren-VPC-Public-Route-Table"
+    Name = "VPC-Public-Route-Table"
   }
   depends_on = [aws_internet_gateway.internet_gateway]
 }
