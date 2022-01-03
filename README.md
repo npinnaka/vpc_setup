@@ -2,7 +2,7 @@
 ## Project: VPC with Single Public Subnet.
 ### Architecture
 
-![PublicVPCSubnet](./architecture.drawio.png)
+![PublicVPCSubnet](./vpc_setup.drawio.png)
 
 ## Requirements
 

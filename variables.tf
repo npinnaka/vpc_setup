@@ -7,7 +7,7 @@ locals {
 
 variable "az" {
   description = "Availability zone for subnet(a,b,c,d,e,f)"
-  default = "a"
+  default     = "a"
 }
 
 variable "region" {

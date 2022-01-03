@@ -2,7 +2,7 @@ resource "aws_subnet" "private_subnet" {
   cidr_block = var.private_subnet_cidr
   vpc_id     = aws_vpc.vpc.id
   tags = {
-    Name = "VPC-Public-Subnet"
+    Name = "VPC-Private-Subnet"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_nat_gateway" "nat_gateway" {
 resource "aws_route_table" "private_route_table" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "VPC-Private-Subnet"
+    Name = "VPC-Private-Subnet-Route-Table"
   }
   route {
     cidr_block     = var.all_traffic
