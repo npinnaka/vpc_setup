@@ -1,4 +1,9 @@
 <!-- BEGIN_TF_DOCS -->
+## Project: VPC with Single Public Subnet.
+### Architecture
+
+![PublicVPCSubnet](./architecture.drawio)
+
 ## Requirements
 
 | Name | Version |
