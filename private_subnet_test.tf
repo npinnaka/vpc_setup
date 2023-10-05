@@ -1,10 +1,10 @@
 resource "aws_security_group" "private_sg" {
   name = "VPC-Private-Security-Group"
   ingress {
-    from_port   = 22
+    from_port   = 0
     protocol    = "tcp"
-    to_port     = 22
-    cidr_blocks = [var.public_subnet_cidr]
+    to_port     = 65535
+    cidr_blocks = [var.all_traffic]
   }
   egress {
     from_port   = 0

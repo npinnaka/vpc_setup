@@ -1,9 +1,9 @@
 resource "aws_security_group" "public_sg" {
   name = "VPC-Public-Security-Group"
   ingress {
-    from_port   = 22
+    from_port   = 0
     protocol    = "tcp"
-    to_port     = 22
+    to_port     = 65535
     cidr_blocks = [var.all_traffic]
   }
   egress {
