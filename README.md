@@ -69,4 +69,7 @@ No modules.
 
 ## Refs
 
+| Name | Description |
+| ---- | ----------- |
+
 <!-- END_TF_DOCS -->
