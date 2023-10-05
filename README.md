@@ -67,4 +67,6 @@ No modules.
 | <a name="output_private_ip"></a> [private_ip](#output_private_ip) | n/a         |
 | <a name="output_public_ip"></a> [public_ip](#output_public_ip)    | n/a         |
 
+## Refs
+
 <!-- END_TF_DOCS -->
